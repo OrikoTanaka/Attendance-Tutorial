@@ -26,7 +26,7 @@ class User < ApplicationRecord
   def User.new_token
     SecureRandom.urlsafe_base64
   end
-  
+ 
   # 永続セッションのためハッシュ化したトークンをデータベースに記憶します。
   def remember
     self.remember_token = User.new_token
